@@ -3,6 +3,6 @@
     <string name="accuracy">Accuracy:</string>
     <string name="latitude">Latitude:</string>
     <string name="longitude">Longitude:</string>
-    <string name="distance_text">Distance from A to B: </string>
-    <string name="bearing_text">Bearing: </string>
+    <string name="distance_text">Distance from A to B: %1$d </string>
+    <string name="bearing_text">Bearing: %1$d </string>
 </resources>

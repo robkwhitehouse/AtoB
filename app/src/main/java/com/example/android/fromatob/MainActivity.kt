@@ -104,13 +104,12 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-
         if (pointAlocation.hasAccuracy() && pointBlocation.hasAccuracy()) {
-            val distance = pointAlocation.distanceTo(pointBlocation)
-            var bearing = pointAlocation.bearingTo(pointBlocation)
-            if (bearing < 0) bearing = 360 - bearing
-            distance_textview.text = distanceText + distance.toInt() + " meters"
-            bearing_textview.text = bearingText + bearing.toInt() + " degrees"
+            val distance = pointAlocation.distanceTo(pointBlocation).toInt()
+            var bearing = pointAlocation.bearingTo(pointBlocation).toInt()
+            if (bearing < 0) bearing += 360
+            distance_textview.text = getString(R.string.distance_text, distance)
+            bearing_textview.text = getString(R.string.bearing_text, bearing)
         }
     }//End of the button click handler
 }//end of class MainActivity
